@@ -59,6 +59,8 @@ nav:
     url:            "/about"
   - name:           "Archive"
     url:            "/archive"
+  - name:           "Categories"
+    url:            "/category"
   - name:           "Tags"
     url:            "/tags"
   - name:           "Github"
