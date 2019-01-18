@@ -34,6 +34,8 @@ body {
 .header {
   padding: 2%;
   margin-bottom: 1.5em;
+  background-color: #5b2c6f; //header 색
+  border-radius: 3px; //header 모서리
 
   &-title {
     margin: 0.3em 0;
@@ -42,7 +44,7 @@ body {
     font-weight: 600;
 
     a {
-      color: $base-color;
+      color: $oc-white; //$base-color;
       &:hover,
       &:focus {
         text-decoration: none;
@@ -57,7 +59,7 @@ body {
 
   &-nav {
     a {
-      color: $oc-gray-7;
+      color: $oc-white; //$oc-gray-7;
       text-transform: lowercase;
       -webkit-transition: all .2s ease;
          -moz-transition: all .2s ease;
@@ -66,7 +68,7 @@ body {
 
       &:hover,
       &:focus {
-        color: $oc-gray-7;
+        color: #f1c40f; //$oc-gray-7;
         text-decoration: none;
       }
     }
