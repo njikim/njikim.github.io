@@ -16,5 +16,9 @@
 
 
   {% include google-analytics.html %}
-
+  
+  <!-- Mathjax -->
+  {% if page.use_math %}
+    {% include mathjax.html %}
+  {% endif %}
 </head>
