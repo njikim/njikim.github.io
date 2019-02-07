@@ -3,10 +3,16 @@ layout: default
 ---
 <header>
   <div class="header-small">
-    <a href="{{site.url}}{{site.baseurl}}">{{ site.name }}</a>
+    <!-- <a href="{{site.url}}{{site.baseurl}}">{{ site.name }}</a> -->
+    <a href="{{site.url}}{{site.baseurl}}">
+      <i class="fa fa-lg fa-arrow-left"></i>
+      <span>Back to Home</span>
+    </a>
   </div>
 </header>
 <div class="page">
-  <div class="page-title">{{ page.title }}</div>
+  <div class="page-title">
+    {{ page.title }}
+  </div>
   {{ content }}
 </div>
