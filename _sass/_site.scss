@@ -34,7 +34,6 @@ body {
 .header {
   padding: 2%;
   margin-bottom: 1.5em;
-  background-color: #5b2c6f; //header 색
   border-radius: 3px; //header 모서리
 
   &-title {
@@ -105,7 +104,25 @@ body {
     font-weight: 600;
   }
 }
+/*--------------
+  Scroll Top
+  --------------*/
 
+.scroll-top {
+  position: fixed;
+  z-index: 9999;
+  display: none;
+  bottom: 20px;
+  right: 10%;
+  
+  img {
+    background-color: #5b2c6f;
+    border-radius: 100px;
+    padding: 15px;
+    height: 50px;
+    width: 50px;
+  }
+}
 
 /*--------------
   Post
