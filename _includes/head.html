@@ -16,5 +16,26 @@
 
 
   {% include google-analytics.html %}
-
+  
+  <!-- Mathjax -->
+  {% if page.use_math %}
+    {% include mathjax.html %}
+  {% endif %}
+  
+  <!-- Scroll Top -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 500) {
+        $('.scroll-top').fadeIn();
+      } else {
+        $('.scroll-top').fadeOut();
+      }
+    });
+    
+    $('.scroll-top').click(function() {
+      $('html, body').stop().animate({scrollTop : 0}, 100);
+      return false;
+    });
+  </script>
 </head>
