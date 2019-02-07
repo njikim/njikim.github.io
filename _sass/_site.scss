@@ -105,6 +105,32 @@ body {
     font-weight: 600;
   }
 }
+
+/*--------------
+  Search
+  --------------*/
+
+#search-container {  
+  input[type=text]:focus {
+    border: 3px solid #006400;
+  }
+}
+
+.search {
+  border: 1px solid #d0d3d4;
+  -webkit-transition: 0.2s;
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 12px 20px;
+  transition: 0.2s;
+  font-size: 20px;
+  margin: 8px 0;
+  outline: none;
+  height: 50px;
+  width: 450px;
+}
+
 /*--------------
   Scroll Top
   --------------*/
