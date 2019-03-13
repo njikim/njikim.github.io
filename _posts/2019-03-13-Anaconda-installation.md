@@ -65,8 +65,22 @@ Anaconda를 설치하였으니, jupyter notebook을 사용할 수 있습니다. 
 
 5. 이제 jupyter notebook을 실행하면 지정한 경로에서 주피터 노트북이 실행되고, 그 경로에 파일이 저장됩니다.
 
+## JDK 설치 및 환경 변수 설정
+파이썬에서 Machine Learning/Deep Learning 알고리즘을 사용하여 분석할 때 필요한 몇가지 프로그램들은 Java를 기반으로 개발되어 있습니다. 따라서 저러한 프로그램들을 실행시키기 위해 JDK 설치가 필요합니다.
 
+### JDK 설치
+<www.oracle.com> 에 접속하여 Java SE Download 를 클릭한 뒤, JavaSE 8버젼을 다운로드 합니다.
+너무 최신 버전은 호환이 안 될 수도 있어서 8버전을 다운받는겁니다!
+아래의 그림예시와 같이 JDK를 클릭 수, accept 버튼을 누른 뒤, 자신의 컴퓨터 사양에 맞는 파일을 다운로드 합니다.
+![0312_9](https://user-images.githubusercontent.com/46670511/54252335-b91e8080-458d-11e9-9e0d-8dc7f36e8daf.png)
+![0312_10](https://user-images.githubusercontent.com/46670511/54252344-c3407f00-458d-11e9-983f-451798513b27.png)
 
+### JDK 환경변수 설정
+나중에 설치될 프로그램한테 jdk가 깔려있다는 것을 명시하기 위해 환경변수 설정을 해야합니다. 
+1. 위와 같은 방식으로 제어판 -> 시스템 & 보안 -> 시스템 -> 고급시스템 설정 -> 환경변수 를 클릭합니다.
+2. 시스템 변수의 새로 만들기를 클릭 후 변수 이름은 JAVA_HOME으로 지정하고 jdk가 설치된 path값을 지정해줍니다. 
+note: 변수이름은 꼭 JAVA_HOME으로 하세요!
+![0312_12](https://user-images.githubusercontent.com/46670511/54252484-61344980-458e-11e9-9807-72f925c52eb2.png)
 
 
 
