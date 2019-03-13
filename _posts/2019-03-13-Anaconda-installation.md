@@ -45,12 +45,17 @@ share: true
 
 	![0312_4](https://user-images.githubusercontent.com/46670511/54249568-fa119780-4583-11e9-883c-5a36ddef3bc6.png)
 
+
 ## Jupyter notebook 환경 설정
 Anaconda를 설치하였으니, jupyter notebook을 사용할 수 있습니다. jupyter notebook 또한 환경 설정을 하지 않으면, 원하지 않는 경로에서 jupyter notebook이 실행되고 저장이 됩니다. <br> 저는 앞으로 파이썬 공부할 내용을 저장할 폴더를 C:/njikim/pythonwork 로 생성하였고, 이폴더를 default로 jupyter notebook가 실행이 되고 저장이 되길 원합니다!!
 
 1. 시작 -> Anaconda3 -> Jupyter notebook 마우스 올리고 오른쪽 버튼 -> '속성' 을 클릭합니다.
 
+<<<<<<< HEAD
 	![0312_5](https://user-images.githubusercontent.com/46670511/54249584-03026900-4584-11e9-8707-302249ae9dc3.png width="200" height="200") ![0312_6](https://user-images.githubusercontent.com/46670511/54249590-0d246780-4584-11e9-91fc-167b511b2d11.png width="200" height="200")
+=======
+	![0312_5](https://user-images.githubusercontent.com/46670511/54249584-03026900-4584-11e9-8707-302249ae9dc3.png)	![0312_6](https://user-images.githubusercontent.com/46670511/54249590-0d246780-4584-11e9-91fc-167b511b2d11.png)
+>>>>>>> bb556981b3149741c51386377ff8114d2ae1a147
 
 2. 빨간 박스 안 USERPROFILE 이라는 변수 안에 경로 정보를 포함한 모든 정보가 담겨있습니다. "%USERPROFILE%/" 얘를 지워버립니다! 즉, 기본 경로를 지워버리는 겁니다.
 
@@ -65,11 +70,13 @@ Anaconda를 설치하였으니, jupyter notebook을 사용할 수 있습니다. 
 
 5. 이제 jupyter notebook을 실행하면 지정한 경로에서 주피터 노트북이 실행되고, 그 경로에 파일이 저장됩니다.
 
+
 ## JDK 설치 및 환경 변수 설정
 파이썬에서 Machine Learning/Deep Learning 알고리즘을 사용하여 분석할 때 필요한 몇가지 프로그램들은 Java를 기반으로 개발되어 있습니다. 따라서 저러한 프로그램들을 실행시키기 위해 JDK 설치가 필요합니다.
 
+
 ### JDK 설치
-<www.oracle.com> 에 접속하여 Java SE Download 를 클릭한 뒤, JavaSE 8버젼을 다운로드 합니다.
+JDK 설치는 <www.oracle.com> 에 접속하여 Java SE Download 를 클릭한 뒤, JavaSE 8버젼을 다운로드 합니다.
 너무 최신 버전은 호환이 안 될 수도 있어서 8버전을 다운받는겁니다!
 아래의 그림예시와 같이 JDK를 클릭 수, accept 버튼을 누른 뒤, 자신의 컴퓨터 사양에 맞는 파일을 다운로드 합니다.
 
