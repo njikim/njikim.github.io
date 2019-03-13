@@ -89,7 +89,8 @@ Anaconda를 설치하였으니, jupyter notebook을 사용할 수 있습니다. 
 2. 시스템 변수의 새로 만들기를 클릭 후 변수 이름은 JAVA_HOME으로 지정하고 jdk가 설치된 path값을 지정해줍니다.
 note: 변수이름은 꼭 JAVA_HOME으로 하세요!
 
-	![0312_12](https://user-images.githubusercontent.com/46670511/54252484-61344980-458e-11e9-9807-72f925c52eb2.png)
+	![0312_12](https://user-images.githubusercontent.com/46670511/54252934-259a7f00-4590-11e9-8871-a9e65608c7ed.png)
+
 
 
 
