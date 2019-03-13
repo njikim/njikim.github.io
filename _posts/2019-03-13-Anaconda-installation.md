@@ -19,7 +19,7 @@ share: true
 
 3. 시작 버튼을 누른 뒤, cmd를 입력하여 명령 프롬프트 창을 띄웁니다. 예를들어, 아래의 예시를 봅시다! <br> 제 컴퓨터에 설치 되어 있는 notepad.exe는 path 설정이 되어 있어 바로 실행이 가능하나, python은 path 설정이 되어있지 않아서 python이 설치된 경로를 직접 찾아가서 실행시켜야 합니다.
 	
-	![0312_1](https://user-images.githubusercontent.com/46670511/54249400-693abc00-4583-11e9-8715-ec06ec2cf0a1.png){: width="100%" height="30%"}
+	![0312_1](https://user-images.githubusercontent.com/46670511/54249400-693abc00-4583-11e9-8715-ec06ec2cf0a1.png)
 	
 	간단한 cd/dir 명령어로 파이썬이 설치된 경로로 이동한 뒤, python.exe를 실행하면 실행되는 것을 확인할 수 있습니다. 
 	이러한 불편함을 감소 시키기 위해 두개의 경로를 저장합니다.
@@ -45,15 +45,13 @@ share: true
 
 	![0312_4](https://user-images.githubusercontent.com/46670511/54249568-fa119780-4583-11e9-883c-5a36ddef3bc6.png)
 
+
 ## Jupyter notebook 환경 설정
 Anaconda를 설치하였으니, jupyter notebook을 사용할 수 있습니다. jupyter notebook 또한 환경 설정을 하지 않으면, 원하지 않는 경로에서 jupyter notebook이 실행되고 저장이 됩니다. <br> 저는 앞으로 파이썬 공부할 내용을 저장할 폴더를 C:/njikim/pythonwork 로 생성하였고, 이폴더를 default로 jupyter notebook가 실행이 되고 저장이 되길 원합니다!!
 
 1. 시작 -> Anaconda3 -> Jupyter notebook 마우스 올리고 오른쪽 버튼 -> '속성' 을 클릭합니다.
 
-	![0312_5](https://user-images.githubusercontent.com/46670511/54249584-03026900-4584-11e9-8707-302249ae9dc3.png)
-
-
-	![0312_6](https://user-images.githubusercontent.com/46670511/54249590-0d246780-4584-11e9-91fc-167b511b2d11.png)
+	![0312_5](https://user-images.githubusercontent.com/46670511/54249584-03026900-4584-11e9-8707-302249ae9dc3.png)	![0312_6](https://user-images.githubusercontent.com/46670511/54249590-0d246780-4584-11e9-91fc-167b511b2d11.png)
 
 2. 빨간 박스 안 USERPROFILE 이라는 변수 안에 경로 정보를 포함한 모든 정보가 담겨있습니다. "%USERPROFILE%/" 얘를 지워버립니다! 즉, 기본 경로를 지워버리는 겁니다.
 
@@ -67,6 +65,7 @@ Anaconda를 설치하였으니, jupyter notebook을 사용할 수 있습니다. 
 	![0312_8](https://user-images.githubusercontent.com/46670511/54249602-1dd4dd80-4584-11e9-8453-24523af3d5a0.png)
 
 5. 이제 jupyter notebook을 실행하면 지정한 경로에서 주피터 노트북이 실행되고, 그 경로에 파일이 저장됩니다.
+
 
 ## JDK 설치 및 환경 변수 설정
 파이썬에서 Machine Learning/Deep Learning 알고리즘을 사용하여 분석할 때 필요한 몇가지 프로그램들은 Java를 기반으로 개발되어 있습니다. 따라서 저러한 프로그램들을 실행시키기 위해 JDK 설치가 필요합니다.
