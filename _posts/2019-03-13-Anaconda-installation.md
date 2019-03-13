@@ -31,14 +31,12 @@ share: true
 	세개의 경로를 저장해야 합니다.
 	Script와 Library/bin 폴더 안에 우리가 앞으로 사용할 다양한 프로그램이 존재하므로 얘도 path 설정을 해주는 것입니다.
 
-```
-C:/Users/(본인 username)/Anaconda3
-C:/Users/(본인 username)/Anaconda3/Scripts
-C:/Users/(본인 username)/Anaconda3/Library/bin
-```
+	C:/Users/(본인 username)/Anaconda3
+	C:/Users/(본인 username)/Anaconda3/Scripts
+	C:/Users/(본인 username)/Anaconda3/Library/bin
 
-예시: 
-Script 하위의 conda.exe를 C:/Users/(본인 username) 에서 실행하면 오류가 뜨는 걸 확인할 수 있습니다.
+	예시: 
+	Script 하위의 conda.exe를 C:/Users/(본인 username) 에서 실행하면 오류가 뜨는 걸 확인할 수 있습니다.
 
 	![0312_3](https://user-images.githubusercontent.com/46670511/54249551-ed8d3f00-4583-11e9-89f3-05e74f943484.png)
 	Path를 저장 후, 같은 위치에서 conda.exe를 실행하면 아래와 같이 잘 실행이 됩니다.
