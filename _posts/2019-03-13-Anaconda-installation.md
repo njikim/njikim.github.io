@@ -19,7 +19,8 @@ share: true
 
 3. 시작 버튼을 누른 뒤, cmd를 입력하여 명령 프롬프트 창을 띄웁니다. 예를들어, 아래의 예시를 봅시다! <br> 제 컴퓨터에 설치 되어 있는 notepad.exe는 path 설정이 되어 있어 바로 실행이 가능하나, python은 path 설정이 되어있지 않아서 python이 설치된 경로를 직접 찾아가서 실행시켜야 합니다.
 
-![Alt text](./images/0312_1.png)
+![0312_1](https://user-images.githubusercontent.com/46670511/54249400-693abc00-4583-11e9-8715-ec06ec2cf0a1.png)
+
 
 	간단한 cd/dir 명령어로 파이썬이 설치된 경로로 이동한 뒤, python.exe를 실행하면 실행되는 것을 확인할 수 있습니다. <br> 이러한 불편함을 감소 시키기 위해 두개의 경로를 저장합니다.
 
