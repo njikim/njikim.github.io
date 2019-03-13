@@ -40,7 +40,7 @@ share: true
 	예시:
 	Script 하위의 conda.exe를 C:/Users/(본인 username) 에서 실행하면 오류가 뜨는 걸 확인할 수 있습니다.
 
-	![0312_3](https://user-images.githubusercontent.com/46670511/54249551-ed8d3f00-4583-11e9-89f3-05e74f943484.png)
+	![0312_3](https://user-images.githubusercontent.com/46670511/54249551-ed8d3f00-4583-11e9-89f3-05e74f943484.png) <br>
 	Path를 저장 후, 같은 위치에서 conda.exe를 실행하면 아래와 같이 잘 실행이 됩니다.
 
 	![0312_4](https://user-images.githubusercontent.com/46670511/54249568-fa119780-4583-11e9-883c-5a36ddef3bc6.png)
@@ -50,15 +50,15 @@ share: true
 Anaconda를 설치하였으니, jupyter notebook을 사용할 수 있습니다. jupyter notebook 또한 환경 설정을 하지 않으면, 원하지 않는 경로에서 jupyter notebook이 실행되고 저장이 됩니다. <br> 저는 앞으로 파이썬 공부할 내용을 저장할 폴더를 C:/njikim/pythonwork 로 생성하였고, 이폴더를 default로 jupyter notebook가 실행이 되고 저장이 되길 원합니다!!
 
 1. 시작 -> Anaconda3 -> Jupyter notebook 마우스 올리고 오른쪽 버튼 -> '속성' 을 클릭합니다.
-	<img src="https://user-images.githubusercontent.com/46670511/54249584-03026900-4584-11e9-8707-302249ae9dc3.png" width="400"/> <img src="https://user-images.githubusercontent.com/46670511/54249590-0d246780-4584-11e9-91fc-167b511b2d11.png" width="400"/>
-
 
 2. 빨간 박스 안 USERPROFILE 이라는 변수 안에 경로 정보를 포함한 모든 정보가 담겨있습니다. "%USERPROFILE%/" 얘를 지워버립니다! 즉, 기본 경로를 지워버리는 겁니다.
+
+	<img src="https://user-images.githubusercontent.com/46670511/54249584-03026900-4584-11e9-8707-302249ae9dc3.png" width="400"/> <img src="https://user-images.githubusercontent.com/46670511/54249590-0d246780-4584-11e9-91fc-167b511b2d11.png" width="400"/>
+
 
 3. 시작 -> Anaconda3 -> Anaconda prompt 창을 열고, <br> Jupyter notebook –generate-config 라는 명령어를 치면, 파일이 생성된 것을 확인할 수 있습니다.
 
 	![0312_7](https://user-images.githubusercontent.com/46670511/54249598-157ca280-4584-11e9-8a5f-c49ba4694ca8.png)
-
 
 4. jupyter_notebook_config.py 파일을 notepad++ 로 실행한 뒤, 저 부분의 주석을 지워주고 원하는 경로를 입력합니다.
 
@@ -76,9 +76,7 @@ JDK 설치는 <www.oracle.com> 에 접속하여 Java SE Download 를 클릭한 �
 너무 최신 버전은 호환이 안 될 수도 있어서 8버전을 다운받는겁니다!
 아래의 그림예시와 같이 JDK를 클릭 수, accept 버튼을 누른 뒤, 자신의 컴퓨터 사양에 맞는 파일을 다운로드 합니다.
 
-![0312_9](https://user-images.githubusercontent.com/46670511/54252335-b91e8080-458d-11e9-9e0d-8dc7f36e8daf.png)
-
-![0312_10](https://user-images.githubusercontent.com/46670511/54252344-c3407f00-458d-11e9-983f-451798513b27.png)
+<img src="https://user-images.githubusercontent.com/46670511/54252335-b91e8080-458d-11e9-9e0d-8dc7f36e8daf.png" width="400"/> <img src="https://user-images.githubusercontent.com/46670511/54252344-c3407f00-458d-11e9-983f-451798513b27.png)" width="400"/>
 
 
 ### JDK 환경변수 설정
