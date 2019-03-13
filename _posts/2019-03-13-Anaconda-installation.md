@@ -19,7 +19,7 @@ share: true
 
 3. 시작 버튼을 누른 뒤, cmd를 입력하여 명령 프롬프트 창을 띄웁니다. 예를들어, 아래의 예시를 봅시다! <br> 제 컴퓨터에 설치 되어 있는 notepad.exe는 path 설정이 되어 있어 바로 실행이 가능하나, python은 path 설정이 되어있지 않아서 python이 설치된 경로를 직접 찾아가서 실행시켜야 합니다.
 	
-	![0312_1](https://user-images.githubusercontent.com/46670511/54249400-693abc00-4583-11e9-8715-ec06ec2cf0a1.png)
+	![0312_1](https://user-images.githubusercontent.com/46670511/54249400-693abc00-4583-11e9-8715-ec06ec2cf0a1.png){: width="100%" height="30%"}
 	
 	간단한 cd/dir 명령어로 파이썬이 설치된 경로로 이동한 뒤, python.exe를 실행하면 실행되는 것을 확인할 수 있습니다. 
 	이러한 불편함을 감소 시키기 위해 두개의 경로를 저장합니다.
@@ -71,8 +71,9 @@ Anaconda를 설치하였으니, jupyter notebook을 사용할 수 있습니다. 
 ## JDK 설치 및 환경 변수 설정
 파이썬에서 Machine Learning/Deep Learning 알고리즘을 사용하여 분석할 때 필요한 몇가지 프로그램들은 Java를 기반으로 개발되어 있습니다. 따라서 저러한 프로그램들을 실행시키기 위해 JDK 설치가 필요합니다.
 
+
 ### JDK 설치
-<www.oracle.com> 에 접속하여 Java SE Download 를 클릭한 뒤, JavaSE 8버젼을 다운로드 합니다.
+JDK 설치는 <www.oracle.com> 에 접속하여 Java SE Download 를 클릭한 뒤, JavaSE 8버젼을 다운로드 합니다.
 너무 최신 버전은 호환이 안 될 수도 있어서 8버전을 다운받는겁니다!
 아래의 그림예시와 같이 JDK를 클릭 수, accept 버튼을 누른 뒤, 자신의 컴퓨터 사양에 맞는 파일을 다운로드 합니다.
 
