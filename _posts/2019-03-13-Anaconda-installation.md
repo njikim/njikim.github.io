@@ -50,7 +50,7 @@ share: true
 Anaconda를 설치하였으니, jupyter notebook을 사용할 수 있습니다. jupyter notebook 또한 환경 설정을 하지 않으면, 원하지 않는 경로에서 jupyter notebook이 실행되고 저장이 됩니다. <br> 저는 앞으로 파이썬 공부할 내용을 저장할 폴더를 C:/njikim/pythonwork 로 생성하였고, 이폴더를 default로 jupyter notebook가 실행이 되고 저장이 되길 원합니다!!
 
 1. 시작 -> Anaconda3 -> Jupyter notebook 마우스 올리고 오른쪽 버튼 -> '속성' 을 클릭합니다.
-<img src="https://openclipart.org/image/2400px/svg_to_png/28580/kablam-Number-Animals-1.png" width="200"/> <img src="https://openclipart.org/download/71101/two.svg" width="300"/>
+<img src="https://user-images.githubusercontent.com/46670511/54249584-03026900-4584-11e9-8707-302249ae9dc3.png" width="200"/> <img src="https://user-images.githubusercontent.com/46670511/54249590-0d246780-4584-11e9-91fc-167b511b2d11.png" width="300"/>
 
 	![0312_5](https://user-images.githubusercontent.com/46670511/54249584-03026900-4584-11e9-8707-302249ae9dc3.png) | ![0312_6](https://user-images.githubusercontent.com/46670511/54249590-0d246780-4584-11e9-91fc-167b511b2d11.png)
 
