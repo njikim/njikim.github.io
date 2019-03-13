@@ -18,6 +18,7 @@ share: true
 2. C:/Users/(본인 username)/Anaconda3 로 들어가면 python.exe 파일이 확인 가능합니다. <br> note: 'exe는 window에서 도스창을 띄우는 확장자명 입니다. (마우스로 클릭해서 도스창이 뜨는 것이 가능하게 하는 user interface)
 
 3. 시작 버튼을 누른 뒤, cmd를 입력하여 명령 프롬프트 창을 띄웁니다. 예를들어, 아래의 예시를 봅시다! <br> 제 컴퓨터에 설치 되어 있는 notepad.exe는 path 설정이 되어 있어 바로 실행이 가능하나, python은 path 설정이 되어있지 않아서 python이 설치된 경로를 직접 찾아가서 실행시켜야 합니다.
+	
 	![0312_1](https://user-images.githubusercontent.com/46670511/54249400-693abc00-4583-11e9-8715-ec06ec2cf0a1.png)
 	
 	간단한 cd/dir 명령어로 파이썬이 설치된 경로로 이동한 뒤, python.exe를 실행하면 실행되는 것을 확인할 수 있습니다. 
@@ -25,6 +26,7 @@ share: true
 
 4. Path 설정을 하기 위해서, 제어판 -> 시스템 및 보안 -> 시스템 -> 고급시스템 버튼을 눌러줍니다. 고급 아래 쪽 환경변수 버튼을 클릭해 주면, 본인 사용자 변수 와 시스템 변수 두가지 옵션이 뜹니다. 
 시스템 변수 하위 새로만들기 버튼을 클릭 한 뒤, 변수값에 앞에 뭐라뭐라 써져있는 값들은 건들지 말고 세미콜론을 추가한 뒤, Anaconda3가 있는 Path값을 추가해줍니다.
+	
 	![0312_2](https://user-images.githubusercontent.com/46670511/54249538-dc443280-4583-11e9-9bd2-4d6316623ce2.png)
 	
 	이런 식으로 Path 설정을 하면, 추가한 경로 안의 시스템은 어디서든 실행이 가능합니다. (어느 경로에서나 파이썬 실행이 가능) 
@@ -47,6 +49,7 @@ share: true
 Anaconda를 설치하였으니, jupyter notebook을 사용할 수 있습니다. jupyter notebook 또한 환경 설정을 하지 않으면, 원하지 않는 경로에서 jupyter notebook이 실행되고 저장이 됩니다. <br> 저는 앞으로 파이썬 공부할 내용을 저장할 폴더를 C:/njikim/pythonwork 로 생성하였고, 이폴더를 default로 jupyter notebook가 실행이 되고 저장이 되길 원합니다!!
 
 1. 시작 -> Anaconda3 -> Jupyter notebook 마우스 올리고 오른쪽 버튼 -> '속성' 을 클릭합니다.
+	
 	![0312_5](https://user-images.githubusercontent.com/46670511/54249584-03026900-4584-11e9-8707-302249ae9dc3.png)
 
 
@@ -84,7 +87,7 @@ Anaconda를 설치하였으니, jupyter notebook을 사용할 수 있습니다. 
 2. 시스템 변수의 새로 만들기를 클릭 후 변수 이름은 JAVA_HOME으로 지정하고 jdk가 설치된 path값을 지정해줍니다. <br> 
 note: 변수이름은 꼭 JAVA_HOME으로 하세요! <br>
 
-![0312_12](https://user-images.githubusercontent.com/46670511/54252484-61344980-458e-11e9-9807-72f925c52eb2.png)
+	![0312_12](https://user-images.githubusercontent.com/46670511/54252484-61344980-458e-11e9-9807-72f925c52eb2.png)
 
 
 
