@@ -51,11 +51,7 @@ Anaconda를 설치하였으니, jupyter notebook을 사용할 수 있습니다. 
 
 1. 시작 -> Anaconda3 -> Jupyter notebook 마우스 올리고 오른쪽 버튼 -> '속성' 을 클릭합니다.
 
-<<<<<<< HEAD
 	![0312_5](https://user-images.githubusercontent.com/46670511/54249584-03026900-4584-11e9-8707-302249ae9dc3.png width="200" height="200") ![0312_6](https://user-images.githubusercontent.com/46670511/54249590-0d246780-4584-11e9-91fc-167b511b2d11.png width="200" height="200")
-=======
-	![0312_5](https://user-images.githubusercontent.com/46670511/54249584-03026900-4584-11e9-8707-302249ae9dc3.png)	![0312_6](https://user-images.githubusercontent.com/46670511/54249590-0d246780-4584-11e9-91fc-167b511b2d11.png)
->>>>>>> bb556981b3149741c51386377ff8114d2ae1a147
 
 2. 빨간 박스 안 USERPROFILE 이라는 변수 안에 경로 정보를 포함한 모든 정보가 담겨있습니다. "%USERPROFILE%/" 얘를 지워버립니다! 즉, 기본 경로를 지워버리는 겁니다.
 
