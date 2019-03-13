@@ -76,7 +76,7 @@ JDK 설치는 <www.oracle.com> 에 접속하여 Java SE Download 를 클릭한 �
 너무 최신 버전은 호환이 안 될 수도 있어서 8버전을 다운받는겁니다!
 아래의 그림예시와 같이 JDK를 클릭 수, accept 버튼을 누른 뒤, 자신의 컴퓨터 사양에 맞는 파일을 다운로드 합니다.
 
-<img src="https://user-images.githubusercontent.com/46670511/54252335-b91e8080-458d-11e9-9e0d-8dc7f36e8daf.png" width="400"/> <img src="https://user-images.githubusercontent.com/46670511/54252344-c3407f00-458d-11e9-983f-451798513b27.png)" width="400"/>
+<img src="https://user-images.githubusercontent.com/46670511/54252335-b91e8080-458d-11e9-9e0d-8dc7f36e8daf.png" width="400"/> <img src="https://user-images.githubusercontent.com/46670511/54252344-c3407f00-458d-11e9-983f-451798513b27.png" width="400"/>
 
 
 ### JDK 환경변수 설정
