@@ -52,16 +52,9 @@ Anaconda를 설치하였으니, jupyter notebook을 사용할 수 있습니다. 
 
 2. 빨간 박스 안 USERPROFILE 이라는 변수 안에 경로 정보를 포함한 모든 정보가 담겨있습니다. "%USERPROFILE%/" 얘를 지워버립니다! 즉, 기본 경로를 지워버리는 겁니다.
 
-<<<<<<< HEAD
+
 	<img src="https://user-images.githubusercontent.com/46670511/54249584-03026900-4584-11e9-8707-302249ae9dc3.png" width="500" />
-    
-    <img src="https://user-images.githubusercontent.com/46670511/54249590-0d246780-4584-11e9-91fc-167b511b2d11.png" width="500" />
-=======
-<section>
-	<img src="https://user-images.githubusercontent.com/46670511/54249584-03026900-4584-11e9-8707-302249ae9dc3.png" width="300" />
-	<img src="https://user-images.githubusercontent.com/46670511/54249590-0d246780-4584-11e9-91fc-167b511b2d11.png" width="300" />
-</section>
->>>>>>> 56044f9dee057bb59d0da9a967cbf44b5e28e6c4
+	<img src="https://user-images.githubusercontent.com/46670511/54249590-0d246780-4584-11e9-91fc-167b511b2d11.png" width="500" />
 
 3. 시작 -> Anaconda3 -> Anaconda prompt 창을 열고, <br> Jupyter notebook –generate-config 라는 명령어를 치면, 파일이 생성된 것을 확인할 수 있습니다.
 	
@@ -98,8 +91,9 @@ note: 변수이름은 꼭 JAVA_HOME으로 하세요!
 
 	<img src="https://user-images.githubusercontent.com/46670511/54252934-259a7f00-4590-11e9-8871-a9e65608c7ed.png" width="500" />
 
--------------
-### <font color=orange> 아나콘다 설치 및 위의 포스트와 같은 환경설정은 파이썬을 사용하여 분석을 시작하기 앞서 매우 매우 중요한 스텝이므로 소홀히 하지 맙시다! </font>
+---------------------
+
+### 아나콘다 설치 및 위의 포스트와 같은 환경설정은 파이썬을 사용하여 분석을 시작하기 앞서 매우 매우 중요한 스텝이므로 소홀히 하지 맙시다! 
 
 
 
