@@ -53,12 +53,7 @@ Anaconda를 설치하였으니, jupyter notebook을 사용할 수 있습니다. 
 
 2. 빨간 박스 안 USERPROFILE 이라는 변수 안에 경로 정보를 포함한 모든 정보가 담겨있습니다. "%USERPROFILE%/" 얘를 지워버립니다! 즉, 기본 경로를 지워버리는 겁니다.
 
-<<<<<<< HEAD
-	<img src="https://user-images.githubusercontent.com/46670511/54249584-03026900-4584-11e9-8707-302249ae9dc3.png" width="300" /> <img src="https://user-images.githubusercontent.com/46670511/54249590-0d246780-4584-11e9-91fc-167b511b2d11.png" width="300"/>
-
-=======
-<img src="https://user-images.githubusercontent.com/46670511/54249584-03026900-4584-11e9-8707-302249ae9dc3.png" width="300"/><img src="https://user-images.githubusercontent.com/46670511/54249590-0d246780-4584-11e9-91fc-167b511b2d11.png" width="300"/>
->>>>>>> 55ed1994965f6fd35922f6f8df16339d6f63f464
+	<img src="https://user-images.githubusercontent.com/46670511/54249584-03026900-4584-11e9-8707-302249ae9dc3.png" width="300" /> <img src="https://user-images.githubusercontent.com/46670511/54249590-0d246780-4584-11e9-91fc-167b511b2d11.png" width="300" />
 
 3. 시작 -> Anaconda3 -> Anaconda prompt 창을 열고, <br> Jupyter notebook –generate-config 라는 명령어를 치면, 파일이 생성된 것을 확인할 수 있습니다.
 
@@ -80,11 +75,7 @@ JDK 설치는 <www.oracle.com> 에 접속하여 Java SE Download 를 클릭한 �
 너무 최신 버전은 호환이 안 될 수도 있어서 8버전을 다운받는겁니다!
 아래의 그림예시와 같이 JDK를 클릭 수, accept 버튼을 누른 뒤, 자신의 컴퓨터 사양에 맞는 파일을 다운로드 합니다.
 
-<<<<<<< HEAD
 <img src="https://user-images.githubusercontent.com/46670511/54252335-b91e8080-458d-11e9-9e0d-8dc7f36e8daf.png" width="300" /> <img src="https://user-images.githubusercontent.com/46670511/54252344-c3407f00-458d-11e9-983f-451798513b27.png" width="300" />
-=======
-<img src="https://user-images.githubusercontent.com/46670511/54252335-b91e8080-458d-11e9-9e0d-8dc7f36e8daf.png" width="400"/><img src="https://user-images.githubusercontent.com/46670511/54252344-c3407f00-458d-11e9-983f-451798513b27.png" width="400"/>
->>>>>>> 55ed1994965f6fd35922f6f8df16339d6f63f464
 
 
 ### JDK 환경변수 설정
