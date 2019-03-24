@@ -1,7 +1,8 @@
 
 ---
 layout: post
-title: "Setting Anaconda path and environment variables"
+title: "Anaconda path and Environment Variables"
+description: "Anaconda installation and setting the path and environment variables"
 date: 2019-03-24
 tags: [Python, Anaconda, Jupyter notebook]
 category: Python
