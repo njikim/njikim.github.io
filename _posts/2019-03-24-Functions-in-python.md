@@ -140,12 +140,9 @@ reduce(lambda x,y : x+ y, [1,2,3,4,5])
 <br>
 ```python
 # when there is only one parameter, it gives you an error
+# TypeError: <lambda>() takes 1 positional argument but 2 were given 
 reduce(lambda x : x**2, [2,2,4,5])
 ```
-<pre class="output"> '
-	error msg' TypeError: <lambda>() takes 1 positional argument but 2 were given 
-</pre>
-
 <br>
 The example above could be extended as python function like this:
 ```python
