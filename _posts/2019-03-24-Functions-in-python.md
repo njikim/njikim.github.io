@@ -3,9 +3,6 @@ layout: post
 title: "Lambda, Map, Filter, Reduce"
 description: "Lambda, Map, Filter, Reduce function in Python"
 date: 2019-03-13
-sitemap:
-	changefreq: weekly
-	priority: 1.0
 tags: [Python, Lambda, Map, Filter, Reduce]
 category: Python
 comments: true
@@ -28,9 +25,9 @@ def sum(x,y):
 result = add(2,3)
 print(result)
  ```
- <pre class="output">
+<pre class="output">
  5 </pre>
-
+<br>
 Now, we are going to make this function by using lambda property.
 ```
 result1 = (lambda x,y : x + y)(2,3)
@@ -38,13 +35,14 @@ print(result1)
 ```
 <pre class="output">
 5 </pre> 
-
+<br>
 ```
 func = lambda x,y : x + y
 print(func(2,3))
 ```
 <pre class="output">
 5 </pre>
+<br>
 ```
 func1 = lambda x,y=10 : x + y
 print(func1(5))
@@ -53,6 +51,7 @@ print(func1(5,6))
 <pre class="output">
 15
 11 </pre>
+<br>
 ```
 # mutable variable
 func2 = lambda a, *b, **c : print(a,b,c)
@@ -60,8 +59,8 @@ func2(1,2,3,n=4,m=5)
 ```
 <pre class="output">
 1 (2, 3) {'n': 4, 'm': 5} </pre>
- 
- Let's look at another example using list.sort() and lambda function together.
+<br>
+Let's look at another example using list.sort() and lambda function together.
  ```
 lst = [1,5,3,9,8,4,2]
 lst.sort()
@@ -69,6 +68,7 @@ lst
 ```
 <pre class="output">
 [1, 2, 3, 4, 5, 8, 9] </pre>
+<br>
 ```
 lst = [1,5,3,9,8,4,2]
 lst.sort(key=lambda a : a)
@@ -76,7 +76,7 @@ lst
 ```
 <pre class="output">
 [1, 2, 3, 4, 5, 8, 9] </pre>
-
+<br>
 
 ```
 lst1 = [('john', 20, 100),('sally',10,50),('adriene',30, 60)]
@@ -85,7 +85,7 @@ lst1
 ```
 <pre class="output">
 [('sally',10,50),('adriene',30, 60),('john', 20, 100)] </pre>
-
+<br>
 ```
 # by using lower(), it changes all the alphabet into small letters and sort
 lst2 = [('Aa'),('DEF'),('cEf')]
@@ -94,7 +94,7 @@ lst2
 ```
 <pre class="output">
 ['Aa', 'cEf', 'DEF'] </pre>
-
+<br>
 ## Map function
 > - It applies the given function on the given list and returns the result as another (iterable) list
 > - map(func, iterable)
@@ -114,18 +114,19 @@ print(list(map(calc,[1,2,3,4])))
 ```
 <pre class="output">
 [2,4,6,8] </pre>
-
+<br>
 ```
 list(map(lambda x: x**2, range(5))
 ```
 <pre class="output"> 
 [0, 1, 4, 9, 16] </pre>
+<br>
 ```
 list(map(lambda x: x**2, [2,2,4,5])
 ```
 <pre class="output">
 [4,4,16,25] </pre>
-
+<br>
 ## Reduce function
 > - It is mainly used for counting
 > - you need to import funtools module in order to use it
@@ -135,13 +136,15 @@ from functools import reduce
 reduce(lambda x,y : x+ y, [1,2,3,4,5])
 ```
 <pre class="output"> 15 </pre>
+<br>
 ```
 # when there is only one parameter, it gives you an error
 reduce(lambda x : x**2, [2,2,4,5])
 ```
 <pre class="output">
-TypeError: <lambda>() takes 1 positional argument but 2 were given </pre>
-
+TypeError: <lambda>() takes 1 positional argument but 2 were given 
+</pre>
+<br>
 The example above could be extended as python function like this:
 ```
 def userReduce():
@@ -153,7 +156,7 @@ def userReduce():
 userReduce()
 ```
 <pre class="output"> 15 </pre>
-
+<br>
 ## Filter function
 > - It can only subtract few parts of the data (it literally filters the data)
 > - filter(func, list)
