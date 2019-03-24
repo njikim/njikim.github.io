@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Anaconda path and Environment Variables"
