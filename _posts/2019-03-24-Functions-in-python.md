@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Lambda, Map, Filter, Reduce"
@@ -13,6 +12,7 @@ comments: true
 share: true
 use_math: true
 ---
+
 Hi! In this post, we are going to deal with some core functions in Python. They might not sounds intuitive at the beginning but once you fully get them, they are super useful! So let's get started.
 
 ## Lambda function
