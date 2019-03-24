@@ -9,15 +9,17 @@ comments: true
 share: true
 ---
 
-Hi! In this post, we are going to deal with some core functions in Python. They might not sounds intuitive at the beginning but once you fully get them, they are super useful! So let's get started.
+Hi! 
+In this post, we are going to deal with some useful functions in Python. They might not sound intuitive at the beginning but once you get comfortable with them, they are super useful! 
+So let's get started.
 
 ## Lambda function
-> - Doesn't have a limit on parameters
-> - You may use it as changing the function or the value of the variables
->  - It can be used by key attributes on list.sort()
->  lambda parameters[...]: expression(formula)
+> - No limit on parameters
+> - Useful for changing the function or the value of the variables
+> - key attributes on list.sort() can be implemented as well (check the example below)
+> - lambda parameters[...]: expression(formula)
 
-Let's look at this function example.
+Let's look at this python function example.
 ```python 
 def sum(x,y):
 	return x + y
@@ -27,7 +29,7 @@ print(result)
 <pre class="output">
  5 </pre>
 <br>
-Now, we are going to make this function by using lambda property.
+Now, we are going to use lambda function to carry out the same result.
 ```python
 result1 = (lambda x,y : x + y)(2,3)
 print(result1)
@@ -59,7 +61,7 @@ func2(1,2,3,n=4,m=5)
 <pre class="output">
 1 (2, 3) {'n': 4, 'm': 5} </pre>
 <br>
-Let's look at another example using list.sort() and lambda function together.
+#### Lambda function with list.sort()
 ```python
 lst = [1,5,3,9,8,4,2]
 lst.sort()
@@ -86,7 +88,7 @@ lst1
 [('sally',10,50),('adriene',30, 60),('john', 20, 100)] </pre>
 <br>
 ```python
-# by using lower(), it changes all the alphabet into small letters and sort
+# by using lower(), it changes all the alphabet into small letters then sort
 lst2 = [('Aa'),('DEF'),('cEf')]
 lst2.sort(key=lambda a : a.lower())
 lst2
@@ -95,10 +97,10 @@ lst2
 ['Aa', 'cEf', 'DEF'] </pre>
 <br>
 ## Map function
-> - It applies the given function on the given list and returns the result as another (iterable) list
+> - It applies the (given) function on the (given) list and returns the result as another (iterable) list
 > - map(func, iterable)
 
-Let's see how this example can be simplified using map function.
+Let's see how this python function example can be simplified using map function.
 ```python
 def calc(x):
 	return x*2
@@ -114,8 +116,9 @@ print(list(map(calc,[1,2,3,4])))
 <pre class="output">
 [2,4,6,8] </pre>
 <br>
- ``` list(map(lambda x: x**2, range(5))
- ```
+``` 
+list(map(lambda x: x**2, range(5))
+```
 <pre class="output"> 
 [0, 1, 4, 9, 16] </pre>
 <br>
@@ -126,8 +129,8 @@ list(map(lambda x: x**2, [2,2,4,5])
 [4,4,16,25] </pre>
 <br>
 ## Reduce function
-> - It is mainly used for counting
-> - you need to import funtools module in order to use it
+> - Mainly used for counting
+> - Need to import funtools module in order to use it
 
 ```python
 from functools import reduce
@@ -139,7 +142,9 @@ reduce(lambda x,y : x+ y, [1,2,3,4,5])
 # when there is only one parameter, it gives you an error
 reduce(lambda x : x**2, [2,2,4,5])
 ```
-<pre class="output"> 'error msg' TypeError: <lambda>() takes 1 positional argument but 2 were given </pre>
+<pre class="output"> '
+	error msg' TypeError: <lambda>() takes 1 positional argument but 2 were given 
+</pre>
 
 <br>
 The example above could be extended as python function like this:
