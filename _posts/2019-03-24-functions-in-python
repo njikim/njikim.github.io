@@ -1,0 +1,59 @@
+
+---
+layout: post
+title: "Lambda, Map, Filter, Reduce"
+description: "Lambda, Map, Filter, Reduce function in Python"
+date: 2019-03-13
+tags: [Python, Lambda, Map, Filter, Reduce]
+category: Python
+comments: true
+share: true
+---
+Hi! In this post, we are going to deal with some core functions in Python. They might not sounds intuitive at the beginning but once you fully get them, they are super useful! So let's get started.
+
+## Lambda function
+> - Doesn't have a limit on parameters
+> - You may use it as changing the function or the value of the variables
+>  - It can be used by key attributes on list.sort()
+>  lambda parameters[...]: expression(formula)
+
+Let's look at this function example.
+ ``` 
+def sum(x,y):
+	return x + y
+result = add(2,3)
+print(result)
+ ```
+ <pre class="output">
+ 5 </pre>
+
+Now, we are going to make this function by using lambda property.
+```
+result1 = (lambda x,y : x + y)(2,3)
+print(result1)
+```
+<pre class="output">
+5 </pre> 
+
+```
+func = lambda x,y : x + y
+print(func(2,3))
+```
+<pre class="output">
+5 </pre>
+```
+func1 = lambda x,y=10 : x + y
+print(func1(5))
+print(func1(5,6))
+```
+<pre class="output">
+15
+11 </pre>
+```
+# mutable variable
+func2 = lambda a, *b, **c: print(a,b,c)
+func2(1,2,3,n=4,m=5)
+```
+<pre class="output">
+1 (2, 3) {'n': 4, 'm': 5} </pre>
+ 
