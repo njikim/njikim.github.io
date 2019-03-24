@@ -15,6 +15,7 @@ share: true
 > - [< loop statement > for < loop variable > in < loop range >]
 > - [< loop statement > for < loop variable > in < loop range > 
 		if < conditional statement >]
+<br>		
 ```python
 data = {}
 for x in range(10):
