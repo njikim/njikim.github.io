@@ -4,10 +4,14 @@ layout: post
 title: "Lambda, Map, Filter, Reduce"
 description: "Lambda, Map, Filter, Reduce function in Python"
 date: 2019-03-13
+sitemap:
+	changefreq: weekly
+	priority: 1.0
 tags: [Python, Lambda, Map, Filter, Reduce]
 category: Python
 comments: true
 share: true
+use_math: true
 ---
 Hi! In this post, we are going to deal with some core functions in Python. They might not sounds intuitive at the beginning but once you fully get them, they are super useful! So let's get started.
 
