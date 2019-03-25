@@ -1,9 +1,6 @@
 ## Class & Instance
 
-### Syntax
-    class ClassName:
-        <variable>
-        <statement> - usually functions
+
 > - attributes & methods are inside of class
 > - A method is a function that “belongs to” an object
 > - instance variable contains data that is unique to each instance
@@ -26,6 +23,8 @@ print(Test().b)
 10
 20 </pre>
 
+<br>
+
 ```python
 # creates a new instance of the class 'Test()'and assigns this object to the local variable t
 t = Test()
@@ -38,6 +37,8 @@ print(t.b)
 20
 30
 </pre>
+
+<br>
 
 ```python
 t1 = Test()
@@ -52,6 +53,8 @@ print(t2)
 <__main__.Test object at 0x0000000004FDA668>
 </pre>
 
+<br>
+
 ```python
 t1.b = 10
 t2.b = 20
@@ -60,6 +63,8 @@ print(t1.b, t2.b)
 <pre class="output">
 10
 20 </pre>
+
+<br>
 
 ### example
 Create an instance called obj from Class object 'Person()'. Then, set the attributes of this instance obj one by one.
