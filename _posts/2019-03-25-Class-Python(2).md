@@ -48,12 +48,8 @@ print('# of instances after creating them: ', Person.no)
 
 <br>
 
-#### note:
-in a method 'raise_sal()' we've used self.raise_amt instead of Person.raise_amt. WHY?
-both Person.raise_amt & self.raise_amt can be used.
--> it is possible to access class variable 'raise_amt' either by Person.raise_amt and self.raise_amt
--> it is possible to access class variable from class itself as well as from instances)
-Then why self.raise_amt? since it can change the value for each instance seperately
+**note:**
+in a method 'raise_sal()' we have used self.raise_amt instead of Person.raise_amt. WHY? <br> both Person.raise_amt & self.raise_amt can be used. <br> -> it is possible to access class variable 'raise_amt' either by Person.raise_amt and self.raise_amt <br> -> it is possible to access class variable from class itself as well as from instances)<br> Then why self.raise_amt? <br> since it can change the value for each instance seperately
 
 ```python
 # class variable is accessible by 'class name.variable name' or 'instance name.variable name'
