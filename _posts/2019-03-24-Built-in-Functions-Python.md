@@ -10,7 +10,7 @@ share: true
 ---
 
 Hi! 
-In this post, we are going to deal with some useful functions in Python. They might not sound intuitive at the beginning but once you get comfortable with them, they are super useful! 
+In this post, we are going to deal with some useful built in functions in Python. They might not sound intuitive at the beginning but once you get comfortable with them, they are super useful! 
 So let's get started.
 
 ## Lambda function
@@ -29,7 +29,7 @@ print(result)
 <pre class="output">
  5 </pre>
 <br>
-Now, we are going to use lambda function to carry out the same result.
+Now, use lambda function to carry out the same result.
 ```python
 result1 = (lambda x, y : x + y)(2, 3)
 print(result1)
@@ -158,7 +158,7 @@ userReduce()
 <pre class="output"> 15 </pre>
 <br>
 ## Filter function
-> - It can only subtract few parts of the data (it literally filters the data)
+> - It subtracts few parts of the data (it literally filters the data)
 > - filter(func, list)
 
 ```python
