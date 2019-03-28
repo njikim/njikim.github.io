@@ -1,17 +1,17 @@
 ---
 layout: post
 title: "Python Class (2)"
-description: "Class variable and Instance variable"
+description: "Class variables and Instance variables"
 date: 2019-03-25
-tags: [Python, Class, Instance, Class variable, Instance variable]
+tags: [Python, Class, Instance, Class variables, Instance variables]
 category: Python
 comments: true
 share: true
 ---
 
-## Class Variable & Instance Variable
-> - Class variable: is shared by all the instances 
-> - Instance variable: contains data that is unique to each instance
+## Class Variables & Instance Variables
+> - Class variables: are shared by all the instances 
+> - Instance variables: contain data that is unique to each instance
 
 ```python
 class Person:

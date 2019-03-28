@@ -3,7 +3,7 @@ layout: post
 title: "Python Class (1)"
 description: "Class and Instance"
 date: 2019-03-25
-tags: [Python, Class, Instancem init]
+tags: [Python, Class, Instance, Init]
 category: Python
 comments: true
 share: true
