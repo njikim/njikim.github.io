@@ -8,23 +8,23 @@ category: Python
 comments: true
 share: true
 ---
-There are three types of methods in Python which are instance methods, class methods and static methods. We are already familiar with Instance methods. They can access unique data of their instance. Note that instance methods must have self as an argument. <br> Now let's look at class methods and static methods!
+There are three types of methods in Python which are instance methods, class methods and static methods. Instance methods must have self as an argument and can access unique data of their instance. <br> 
+Now, let's look at class methods and static methods!
 
 ## Class Methods & Static Methods
 
 
 > - Class Methods:
- - need to add @classmethod above the method
- - do not need self as an argument
- - But! they need a parameter called cls
+>    - need to add @classmethod above the method
+>    - do not need self as an argument
+>    - But! they need a parameter called cls
 
 > - Static Methods:
- - need to add @staticmethod above the method
- - do not need self as an arguemt
- - do not need to instantiate an instance
+>    - need to add @staticmethod above the method
+>    - do not need self as an arguemt
+>    - do not need to instantiate an instance
 
-<br>
-
+### Example
 ```python
 class Rectangle:
     width = float()
@@ -35,12 +35,13 @@ class Rectangle:
         self.width = width
         self.height = height
         Rectangle.cnt += 1
-
-    def calcArea(self): #instance method
+    
+    #instance method
+    def calcArea(self): 
         area = self.width*self.height
         return area
 
-    @staticmethod  # @ represents decorator (wrapping)
+    @staticmethod  
     def isSquare(width,height):
         return width == height
 
@@ -55,8 +56,7 @@ r1 = Rectangle(5,5)
 r2 = Rectangle(2,5)
 r1.printCount()
 ```
-
-<pre class="output"> 
+<pre class="output">
 True
 2 
 </pre>

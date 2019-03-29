@@ -1,21 +1,17 @@
 ---
 layout: post
 title: "Python Class (2)"
-description: "Class variable and Instance variable"
+description: "Class variables and Instance variables"
 date: 2019-03-25
-tags: [Python, Class, Instance]
+tags: [Python, Class, Instance, Class variables, Instance variables]
 category: Python
 comments: true
 share: true
 ---
 
-## Class Variable & Instance Variable
-
-
-> - Class variable: all the instances share this variable
-> - Instance variable: unique for each instance
-
-<br>
+## Class Variables & Instance Variables
+> - Class variables: are shared by all the instances 
+> - Instance variables: contain data that is unique to each instance
 
 ```python
 class Person:
@@ -35,7 +31,7 @@ class Person:
 <br>
 
 ```python
-# we are going to create two instances p1 and p2. Observe the class variable 'Person.no'
+# we are going to create two instances p1 and p2 and print the class variable 'Person.no' 
 print('# of instances before creating them:', Person.no)
 p1 = Person('kim', 25, 100)
 p2 = Person('lee', 30, 50)
@@ -48,8 +44,11 @@ print('# of instances after creating them: ', Person.no)
 
 <br>
 
-**note:**
-in a method 'raise_sal()' we have used self.raise_amt instead of Person.raise_amt. WHY? <br> both Person.raise_amt & self.raise_amt can be used. <br> -> it is possible to access class variable 'raise_amt' either by Person.raise_amt and self.raise_amt <br> -> it is possible to access class variable from class itself as well as from instances)<br> Then why self.raise_amt? <br> since it can change the value for each instance seperately
+#### Note: in a method 'raise_sal()' we have accessed class variable raise_amt by self.raise_amt instead of Person.raise_amt. WHY?
+> it is possible to access class variable from class itself as well as from instances
+
+> Then why self.raise_amt? <br>
+> since it can change the value for each instance seperately
 
 ```python
 # class variable is accessible by 'class name.variable name' or 'instance name.variable name'
@@ -66,7 +65,7 @@ print(p2.raise_amt)
 <br>
 
 ```python
-#this will change all
+#Access by class itself will change the value all
 Person.raise_amt = 1.10
 print(Person.raise_amt)
 print(p1.raise_amt)
@@ -81,7 +80,7 @@ print(p2.raise_amt)
 <br>
 
 ```python
-#this will only change p1.raise_amt
+#Access by each instance (p1) will only change p1.raise_amt
 p1.raise_amt = 1.03   #creating attribute('raise_amount') within emp_1
 print(Person.raise_amt)
 print(p1.raise_amt)
