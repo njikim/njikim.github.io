@@ -1,14 +1,14 @@
 /* refer to https://github.com/spoqa/spoqa.github.com/blob/master/css/syntax.css */ 
 
 /* Base */
-.highlight  { background: $oc-black; } /* #333333 */ 
+.highlight  { background: #232323; } /* $oc-black */ 
 
 /* B */
 .highlight .bp { color: #87CEFA } /* Name.Builtin.Pseudo #32cd32 LIGHTSKYBLUE*/
 
 /* C */
 .highlight .c { color: #32CD32; font-style: italic } /* Comment #bdc3c7 LIMEGREEN*/
-.highlight .cm { color: #32CD32; font-style: italic } /* Comment.Multiline #999988*/
+.highlight .cm { color: #FFA07A; font-style: italic } /* Comment.Multiline #999988 LIGHTSALMON*/
 .highlight .cp { color: #32CD32; font-weight: bold } /* Comment.Preproc #999999*/
 .highlight .cs { color: #32CD32; font-weight: bold; font-style: italic } /* Comment.Special #999999*/
 .highlight .c1 { color: #32CD32; font-style: italic } /* Comment.Single #999988*/
@@ -34,7 +34,7 @@
 .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
 
 /* K */
-.highlight .k { color: #1E90FF; font-weight: bold } /* Keyword #fd9800  DODGERBLUE*/
+.highlight .k { color: #6495ED} /* Keyword #fd9800 ; font-weight: bold CORNFLOWERBLUE*/
 .highlight .kc { font-weight: bold } /* Keyword.Constant */
 .highlight .kd { font-weight: bold } /* Keyword.Declaration */
 .highlight .kp { font-weight: bold } /* Keyword.Pseudo */
@@ -56,15 +56,15 @@
 .highlight .nc { color: #00FA9A } /* Name.Class #445588; font-weight: bold 	MEDIUMSPRINGGREEN*/
 .highlight .no { color: #008080 } /* Name.Constant */
 .highlight .ni { color: #800080 } /* Name.Entity */
-.highlight .ne { color: #FFFFE0 } /* Name.Exception #990000; font-weight: bold LIGHTYELLOW*/
-.highlight .nf { color: #FFFFE0 } /* Name.Function #990000; font-weight: bold LIGHTYELLOW*/
+.highlight .ne { color: #FFFACD } /* Name.Exception #990000; font-weight: bold LEMONCHIFFON*/
+.highlight .nf { color: #FFFACD } /* Name.Function #990000; font-weight: bold LEMONCHIFFON*/
 .highlight .nn { color: $oc-white } /* Name.Namespace */
 .highlight .nt { color: #000080 } /* Name.Tag */
 .highlight .nv { color: #008080 } /* Name.Variable */
 
 /* O */
-.highlight .o { font-weight: bold; color: $oc-white } /* Operator #adff2f*/
-.highlight .ow { font-weight: bold; color: #adff2f } /* Operator.Word */
+.highlight .o {color: $oc-white } /* Operator  font-weight: bold; #adff2f*/
+.highlight .ow {color: $oc-white } /* Operator.Word font-weight: bold; #adff2f*/
 
 /* P */
 .highlight .p { color: $oc-white; } 
