@@ -140,7 +140,7 @@ print(list(map(calc, [1, 2, 3, 4])))
 
 <br>
 
-``` 
+```python
 list(map(lambda x : x**2, range(5))
 ```
 <pre class="output">
