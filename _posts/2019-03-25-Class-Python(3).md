@@ -14,12 +14,12 @@ Now, let's look at class methods and static methods!
 ## Class Methods & Static Methods
 
 
-> - Class Methods:
+> Class Methods:
 >    - need to add @classmethod above the method
 >    - do not need self as an argument
 >    - But! they need a parameter called cls
 
-> - Static Methods:
+> Static Methods:
 >    - need to add @staticmethod above the method
 >    - do not need self as an arguemt
 >    - do not need to instantiate an instance
