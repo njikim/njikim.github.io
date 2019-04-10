@@ -1,0 +1,216 @@
+group by
+
+-- 부서별로 급여 평균, 최저 급여 조회 (급여 평균이 높은 순으로)
+-- 실행순서: FROM -> GROUP BY ->SELECT -> ORDER BY
+SELECT deptno, round(avg(sal)), round(min(sal))
+FROM scott_emp
+GROUP BY deptno
+ORDER BY avg(sal) DESC;
+
+-- 전체 급여의 합계가 5000을 초과하는 업무에 대해서 급여 합계 조회 (deptno로 정렬)
+-- 실행순서: FROM -> GROUP BY -> HAVING -> SELECT -> ORDER BY
+SELECT job, sum(sal) 
+FROM scott_emp  /* WHERE sum(sal) > 5000 오류발생 */
+GROUP BY job
+HAVING sum(sal) > 5000 
+ORDER BY deptno;
+
+
+-- 전체 급여의 합계가 5000을 초과하는 업무에 대해서 급여 합계 조회 (단, salesman 제외)
+SELECT job, sum(sal) 
+FROM scott_emp
+GROUP BY job
+HAVING sum(sal) > 5000 AND job <> 'salesman';
+
+-- 성능 더 좋음
+SELECT job, sum(sal) 
+FROM scott_emp
+WHERE job <> 'salesman'
+GROUP BY job
+HAVING sum(sal) > 5000;
+
+subquery
+
+-- scott의 급여보다 더 많이 받는 직원의 이름, 업무, 급여를 조회
+SELECT ename, job, sal FROM scott_emp 
+WHERE sal > (SELECT sal FROM scott_emp  WHERE ename='scott');
+
+
+-- 사번이 7521의 업무와 같고, 급여가 7934보다 많은 직원의 사번, 이름, 업무, 급여조회
+SELECT ename, job, sal FROM scott_emp 
+WHERE job = (SELECT job FROM scott_emp WHERE empno='7521') 
+AND sal > (SELECT sal FROM scott_emp WHERE empno='7934');
+
+-- 업무별로 최소급여를 받는 직원의 사번, 이름, 부서코드를 조회
+SELECT empno, ename, deptno FROM scott_emp 
+WHERE sal IN (SELECT min(sal) FROM scott_emp GROUP BY job);
+
+
+-- 업무별로 최소급여보다 많이 받는 직원의 사번, 이름, 부서코드를 조회
+SELECT empno, ename, deptno ,sal, job FROM scott_emp
+WHERE sal > ANY(SELECT min(sal) FROM scott_emp GROUP BY job);
+
+
+SELECT empno, ename, deptno ,sal, job FROM scott_emp
+WHERE sal >= ALL(SELECT max(sal) FROM scott_emp GROUP BY job);
+
+
+-- 급여와 커미션이 30번 부서에 있는 직원의 급여와 커미션이 같은 직원에 대해 사번, 이름, 부서번호, 급여, 커미션 조회
+SELECT ename, sal, comm, deptno FROM scott_emp WHERE deptno=30;
+
+-- 동시에 비교할 수 없음. 밀러가 나오면 안되는 결과임
+SELECT empno, ename, deptno ,sal, job, comm FROM scott_emp
+WHERE (sal, comm) IN (SELECT sal, comm FROM scott_emp WHERE deptno=30); 
+
+SELECT empno, ename, deptno ,sal, job, comm FROM scott_emp
+WHERE sal = ALL(SELECT sal FROM scott_emp WHERE deptno=30) AND comm = ALL(SELECT comm FROM scott_emp WHERE deptno=30);
+
+UPDATE scott_emp
+SET sal= 1500 , comm=300
+WHERE ename='miller';
+
+
+-- 적어도 한명의 직원으로부터 보고를 받을 수 있는 직원의 이름, 업무, 입사일자, 급여를 조회 
+SELECT ename, job, hiredate, sal FROM scott_emp as  e1
+WHERE exists (SELECT * FROM scott_emp as e2 WHERE e1.empno= e2.mgr);
+
+
+**** 서브쿼리 문제 ****
+1. Blake와 같은 부서에 있는 모든 직원의 사번, 이름, 입사일자 조회
+select empno, ename, hiredate from scott_emp 
+where deptno=(select deptno from scott_emp where ename='blake');
+
+2. SELECT empno, ename, deptno, sal, comm FROM scott_emp
+WHERE (sal, comm) in(SELECT sal, comm FROM scott_emp WHERE deptno=30);
+이 쿼리에서 보너스가 null인 사람도 출력될 수 있도록 수정하시오.
+SELECT empno, ename, deptno, sal,comm FROM scott_emp
+WHERE (sal, coalesce(comm, 'null')) in(SELECT sal, coalesce(comm,'null') FROM scott_emp WHERE deptno=30);
+
+
+3. 평균 급여 이상을 받는 직원들의  사번, 이름을 조회. 단, 급여가 많은 순으로 정렬
+select empno, ename from scott_emp
+where sal>=(select avg(sal) from scott_emp) order by sal desc;
+
+4. 이름에 T자가 들어가는 직원이 근무하는 부서에서 근무하는 직원의 사번,이름, 급여 조회
+
+select empno, ename, sal from scott_emp
+where deptno in(select distinct deptno from scott_emp where ename like '%T%');
+
+5. 부서의 위치가 dallas인 모든 직원에 대해 사번, 이름, 급여, 업무조회
+select empno, ename, sal, job from scott_emp 
+where deptno=(select deptno from scott_dept where loc='dallas'); 
+
+
+6. King에게 보고하는 모든 직원의 이름과 부서, 업무, 급여를 조회
+
+select ename, deptno, job, sal from scott_emp 
+where mgr=(select empno from scott_emp where ename='king');
+
+7. 급여가 30번 부서의 최저급여보다 높은 직원의 사번, 이름, 급여 조회
+
+select empno, ename, sal from scott_emp
+where sal>any(select min(sal) from scott_emp where deptno=30);
+
+
+8. 10번부서에서 30번 부서의 직원과 같은 업무를 하는 직원의 이름과 업무를 조회
+select ename, job from scott_emp
+where job in (select job from scott_emp where deptno=30) and deptno=10;
+
+1. 오늘부터 12월 25일까지 몇일이 남았는가?
+		
+			SELECT DATEDIFF('2019.12.25', NOW());
+
+
+2. 현재까지 근무한 직원들의 근무일수를 몇주 몇일로 조회.(단, 근무일수가 많은 사람 순으로 조회)
+
+    SELECT ename, TIMESTAMPDIFF(MONTH, hiredate, NOW())as work_month, TIMESTAMPDIFF(DAY, hiredate, NOW())as work_day 
+    FROM scott_emp ORDER BY work_month desc, work_day desc;
+    
+3. 10번 부서 직원들 중 현재까지의 근무월수를 계산해서 조회
+    
+    SELECT ename, deptno, TIMESTAMPDIFF(MONTH, hiredate, NOW()) FROM scott_emp WHERE deptno = 10;
+
+4. 20번 부서 직원들 중 입사일자로부터 13개월이 지난 후의 날짜를 조회
+
+    SELECT ename, deptno, DATE_ADD(hiredate, INTERVAL 13 MONTH)as After_month FROM scott_emp WHERE deptno=20;
+
+5. 모든 직원에 대해 입사한 달의 근무일수를 조회
+
+    SELECT ename, hiredate,
+
+    EXTRACT(DAY FROM LAST_DAY(hiredate))-EXTRACT(DAY FROM hiredate) AS "입사 달 근무일수"
+
+    FROM scott_emp;
+
+6. 현재 급여에 15%가 증가된 급여를 계산하여 사번,이름, 급여, 증가된 급여를 조회(단, 급여는 반올림하여 적용한다.)
+
+    SELECT deptno, ename, sal, ROUND(sal*1.15) as "증가된 급여" FROM scott_emp;
+
+7. 이름, 입사일, 입사일로부터 현재까지의 월수, 급여,급여 총계를 조회
+
+    SELECT ename, hiredate, TIMESTAMPDIFF(MONTH, hiredate, NOW())as work_month, sal, 
+    TIMESTAMPDIFF(MONTH, hiredate, NOW())*sal as "급여총계" FROM scott_emp;
+
+8. 업무가 analyst이면 급여를 10%증가시키고 clerk이면 15%, manager이면 20%증가 시켜서 이름, 업무, 급여, 증가된 급여를 조회
+
+    SELECT ename, job, sal,
+        CASE
+            WHEN job = 'analyst' THEN CEIL(sal*1.1)
+            WHEN job = 'clerk' THEN CEIL(sal*1.15)
+            WHEN job = 'manager' THEN CEIL(sal*1.2)
+            ELSE sal
+        END "증가된 급여"
+    FROM scott_emp;
+
+9. 이름의 첫글자가 k보다 크고 y보다 작은 직원의 이름, 부서, 업무를 조회하시오.
+
+    SELECT ename as '사원이름', deptno as '부서', job as '업무' FROM scott_emp WHERE ename between 'k%' and 'y%';
+
+    
+
+SELECT e1.ename , e1.hiredate, e2.ename as 'name of manager', e2.hiredate as 'hiredate of manager' 
+FROM scott_emp e1 INNER JOIN scott_emp e2 
+ON e1.mgr=e2.empno and e1.hiredate<e2.hiredate;
+
+
+SELECT tableA.id, tableA.value 
+FROM tableA INNER JOIN tableB 
+ON tableA.id = tableB.id; 
+
+-- salesman에 대해서 직원의 사번, 이름, 업무, 부서번호, 부서명을 조회
+-- ! 조건을 조인하면서 같이줄 때
+SELECT empno, ename, job, e.deptno, dname 
+FROM scott_emp e INNER JOIN scott_dept d 
+ON e.deptno = d.deptno AND job = 'salesman';
+
+-- ! 조건을 조인 하고 나서 뒤에 줄 때
+SELECT empno, ename, job, e.deptno, dname 
+FROM scott_emp e INNER JOIN scott_dept d 
+ON e.deptno = d.deptno 
+WHERE job = 'salesman';
+
+-- New york에서 근무하는 직원의 이름, 업무, 부서명 조회
+SELECT ename, job, scott_dept.dname 
+FROM scott_dept INNER JOIN scott_emp 
+ON scott_emp.deptno = scott_dept.deptno 
+WHERE loc = 'NEW YORK';
+
+SELECT a.id, a.value 
+FROM tableA a LEFT OUTER JOIN tableB b 
+ON a.id = b.id;
+
+-- 직원들의 이름, 급여, 근무지를 조회. 단, 부서명과 근무지는 모두 출력할 수 있도록 하시오
+SELECT ename, sal, dname, loc 
+FROM scott_emp RIGHT OUTER JOIN scott_dept 
+ON scott_emp.deptno = scott_dept.deptno;
+
+---직원들의 사번, 이름, 급여, 급여등급 조회
+SELECT empno, ename, sal, grade, losal, hisal 
+FROM scott_emp e INNER JOIN scott_salgrade s 
+ON e.sal >= s.losal AND e.sal <= s.hisal;
+
+-- 직원의 사번, 이름, 업무, 관리자, 관리자이름 조회
+-- 별명주기 필수
+SELECT e.empno, e.ename, e.job, e.mgr, m.ename 
+FROM scott_emp e INNER JOIN scott_emp m 
+ON e.mgr = m.empno;
