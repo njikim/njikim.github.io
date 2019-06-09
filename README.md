@@ -1,6 +1,6 @@
 # Eunji's Blog
 
-### 블로그를 운영중입니다. [이곳](https://njikim.github.io)으로 오세요
+### come and visit my blog [heree](https://njikim.github.io)
 
 <br>
 
